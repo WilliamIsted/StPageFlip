@@ -17,10 +17,8 @@ No code from the original will be reused. The reference documentation provides c
 ### 2.1 Language and Tooling
 
 - **Language:** TypeScript (strict mode).
-- **Build:** Rollup (or equivalent) producing UMD and ES Module bundles, with minification and CSS inlining.
-- **Linting:** ESLint with TypeScript rules.
-- **Testing:** Vitest or Jest for unit tests.
-- **Target:** ES2017 or later.
+- **Build output:** Minified UMD and ES Module JavaScript bundles, with CSS inlined and `.d.ts` type declarations.
+- **Linting and testing:** Implementer's choice of tooling.
 
 ### 2.2 Architecture Overview
 
@@ -203,7 +201,7 @@ The library must address the following concerns. How they are organised into mod
 **Acceptance Criteria:**
 - [ ] All unit tests pass
 - [ ] No TypeScript errors in strict mode
-- [ ] Bundle size is comparable to or smaller than the reference (~50KB minified)
+- [ ] Bundle size is reasonable for a zero-dependency library
 - [ ] 60fps animation sustained on Chrome DevTools "mid-tier mobile" throttle
 - [ ] Cross-browser validation: Chrome, Firefox, Safari, Edge, mobile Safari, mobile Chrome
 - [ ] API documentation covers all public methods, events, and configuration options
