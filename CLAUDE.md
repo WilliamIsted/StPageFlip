@@ -42,14 +42,20 @@ The codebase follows a modular OOP architecture with these core subsystems:
 2. **Animation System** (`Render.ts`): Frame-based animation using `requestAnimationFrame`. Pre-computes interpolated points between start/end positions, then replays them at calculated frame durations.
 3. **Coordinate Systems**: Three coordinate spaces - window (global), book (relative to book rect), and page (relative to active page). Conversion methods handle transforms between them.
 
-## Documentation Task
+## Documentation (Complete)
 
-We are creating comprehensive documentation to serve as the basis for a from-scratch rewrite:
-- `docs/01-core-principles.md` - Core parts and principles
-- `docs/02-compiled-deliverable.md` - What the compiled output does and how
-- `docs/03-reverse-engineered-files.md` - Detailed file-by-file analysis
-- `docs/04-agency-brief.md` - Web agency style brief
-- `docs/05-scope-of-work.md` - Scope of work for rewrite
+All five documentation deliverables have been created to serve as the basis for a from-scratch rewrite:
+- `docs/01-core-principles.md` - Core parts and principles (163 lines)
+- `docs/02-compiled-deliverable.md` - What the compiled output does and how (196 lines)
+- `docs/03-reverse-engineered-files.md` - Detailed file-by-file analysis of all 20 source files (~800 lines)
+- `docs/04-agency-brief.md` - Web agency style brief with functional/technical requirements (~250 lines)
+- `docs/05-scope-of-work.md` - 7-phase scope of work with milestones and acceptance criteria (~300 lines)
+
+### Known Issues Documented
+- CSS class name typo: `.sft__wrapper` in CSS vs `.stf__wrapper` in JS (wrapper gets no CSS styling)
+- Type-casting workaround: FlipCalculation receives dimensions as strings, parses with parseInt
+- Error swallowing: empty catch blocks in Flip.start(), FlipCalculation.calc(), Flip.flipToPage()
+- Settings mutation: Object.assign mutates the internal defaults object
 
 ## Branch
 
